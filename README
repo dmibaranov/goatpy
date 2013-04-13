@@ -1,0 +1,33 @@
+About
+=====
+
+A small python REPL for Python servers
+
+Originally published by Itamar Turner-Trauring
+
+http://blog.futurefoundries.com/2013/04/ssh-into-your-python-server.html
+
+Usage
+=====
+
+$ pip install https://github.com/d9frog9n/goatpy
+
+# usage.py
+from time import sleep
+
+from goatpy import start_repl
+
+
+if __name__ == '__main__':
+    a = 1
+    start_repl(namespace=locals()).wait()
+    while True:
+        sleep(1)
+        print a
+
+$ python -m usage.py
+
+$ telnet localhost 8081
+username: admin
+password: admin
+>>> a=2
