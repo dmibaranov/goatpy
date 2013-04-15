@@ -9,7 +9,8 @@ setup(
     description="A small REPL shell for Python servers",
     url="http://github.com/d9frog9n/goatpy",
     install_requires=[
-        "Twisted",
+        "pyasn1",
+        "pycrypto",
         "crochet",
     ],
 )
